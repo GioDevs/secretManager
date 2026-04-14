@@ -1,0 +1,4 @@
+aws:
+  secretsmanager:
+    name: local/database
+    region: us-east-2
