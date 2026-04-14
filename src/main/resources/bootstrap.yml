@@ -1,4 +1,6 @@
 aws:
   secretsmanager:
-    name: local/database
+    defaultContext: local/database
+    prefix: ""
+    failFast: true
     region: us-east-2
