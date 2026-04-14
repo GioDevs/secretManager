@@ -20,6 +20,9 @@ public class CredentialsController {
     @Value("${spring.datasource.url}")
     private String url;
 
+    @Value("${spring.antitamper.key}")
+    private String key;
+
     @GetMapping("/credentials")
     public ResponseEntity<Map<String, String>> get() {
 
@@ -27,6 +30,7 @@ public class CredentialsController {
         credentials.put("spring.datasource.username", username);
         credentials.put("spring.datasource.password", password);
         credentials.put("spring.datasource.url", url);
+        credentials.put("spring.antitamper.key", key);
 
 
         return ResponseEntity.ok(credentials);
