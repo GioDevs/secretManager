@@ -11,10 +11,10 @@ import java.util.Map;
 @RestController
 public class CredentialsController {
 
-    @Value("${username}")
+    @Value("${spring.datasource.username}")
     private String username;
 
-    @Value("${password}")
+    @Value("${spring.datasource.password}")
     private String password;
 
     @Value("${spring.datasource.url}")
